@@ -34,9 +34,7 @@
 
 /* Public Functions ----------------------------------------------------------- */
 
-static void set_PinFunc ( uint8_t portnum, uint8_t pinnum, uint8_t funcnum);
-static void set_ResistorMode ( uint8_t portnum, uint8_t pinnum, uint8_t modenum);
-static void set_OpenDrainMode( uint8_t portnum, uint8_t pinnum, uint8_t modenum);
+
 
 /*********************************************************************//**
  * @brief 		Setup the pin selection function
@@ -156,7 +154,7 @@ static void set_PinFunc ( uint8_t portnum, uint8_t pinnum, uint8_t funcnum)
 
  * @return 		None
  **********************************************************************/
-void set_ResistorMode ( uint8_t portnum, uint8_t pinnum, uint8_t modenum)
+static void set_ResistorMode ( uint8_t portnum, uint8_t pinnum, uint8_t modenum)
 {
 	uint32_t pinnum_t = pinnum;
 	uint32_t pinmodereg_idx = 2 * portnum;
